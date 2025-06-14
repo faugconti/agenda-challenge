@@ -1,11 +1,13 @@
-require('dotenv').config();
-const express = require('express');
 const sequelize = require('./database/index');
-const app = express();
+const seed = require('./database/seeders/seed'); 
+const app = require('./app');
 
 async function init_db() {
   try {
     await sequelize.sync({ force: true });
+    if (process.env.SEED_DB === 'true') {
+      await seed(); 
+    }
     console.log('Running db!');
   } catch (error) {
     console.error('Error: ', error);
