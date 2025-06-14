@@ -1,3 +1,4 @@
+const Provincia = require('./Provincia');
 const { DataTypes } = require('sequelize');
 const sequelize = require('../index');
 
@@ -24,6 +25,11 @@ const Contacto = sequelize.define('Contacto', {
 }, {
     tableName: 'contactos',
     timestamps: false
+});
+
+Contacto.belongsTo(Provincia, {
+  foreignKey: 'provincia_id',
+  as: 'provincia'
 });
 
 
