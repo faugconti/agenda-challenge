@@ -1,4 +1,5 @@
 import { createPortal } from 'react-dom';
+import '../styles/modal.css';
 
 const Modal = ({ children, onClose, className }) => {
 

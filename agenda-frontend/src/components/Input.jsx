@@ -1,3 +1,4 @@
+import '../styles/input.css';
 
 const Input = ({ label, id, error, ...props }) => {
     return (

@@ -3,7 +3,7 @@ import ContactModal from './components/ContactModal';
 import ConfirmationModal from './components/ConfirmationModal';
 import { ContactsContext } from './context/ContactsContext';
 import ContactList from './components/ContactList';
-import './App.css';
+import './styles/app.css';
 
 function App() {
 

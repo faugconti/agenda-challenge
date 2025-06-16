@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ContactsContext } from "../context/ContactsContext";
+import '../styles/contact.css';
 
 const Contact = ({ contact }) => {
 
