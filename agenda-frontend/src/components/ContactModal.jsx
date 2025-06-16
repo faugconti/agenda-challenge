@@ -103,12 +103,12 @@ const ContactModal = ({ onClose }) => {
                     />
                     <div className="control">
                         <label>Province</label>
-                    </div>
                     <select name="province" value={provinceId} onChange={e => setProvinceId(e.target.value)}>
                         {provinces.map(prov => (
                             <option key={prov.id} value={prov.id}>{prov.nombre}</option>
                         ))}
                     </select>
+                    </div>
                 </div>
                 <div className="buttons">
                     <button type="button" onClick={onClose}>
