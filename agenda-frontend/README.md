@@ -1,12 +1,44 @@
-# React + Vite
+# Frontend 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**This is the frontend for the "Agenda" project. Made using the following technologies:**
 
-Currently, two official plugins are available:
+**Language:** Javascript
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Library:** React.js
 
-## Expanding the ESLint configuration
+**Build tool:** Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Architecture:** SPA
+
+
+### Mock
+![Application mock](/maqueta.png "Agenda")
+
+### Dependencies
+* [Node](https://nodejs.org/en/download) 
+
+or
+* [docker](https://docs.docker.com/engine/install/)
+### How to run 
+#### development
+
+```
+git clone https://github.com/faugconti/agenda-challenge 
+cd agenda-frontend
+npm install
+mv .env.example .env                #renames to .env
+npm run dev
+```
+#### Docker container
+```
+mv .env.example .env                #renames to .env
+docker image build -t agenda_front .
+source .env && docker run -p $VITE_FRONTEND_PORT:$VITE_FRONTEND_PORT -e PORT=$VITE_FRONTEND_PORT agenda_front:latest
+```
+
+#### Environment variables
+change variables inside _(.env.example)_ if needed and rename to .env before executing above
+```
+VITE_FRONTEND_PORT=5173             # for local dev server
+VITE_API_URL=http://localhost:3000  # for backend server requests
+```
