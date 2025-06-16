@@ -12,7 +12,7 @@
 
 
 ### Mock
-![Application mock](/maqueta.png "Agenda")
+![Application mock](https://github.com/faugconti/agenda-challenge/blob/develop/agenda-frontend/maqueta.png?raw=true)
 
 ### Dependencies
 * [Node](https://nodejs.org/en/download) 
