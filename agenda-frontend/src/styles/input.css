@@ -1,0 +1,26 @@
+.control {
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 0.5rem; */
+}
+
+.control label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.control input {
+  /* padding: 0.5rem; */
+  box-sizing: border-box;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.control-error p {
+  color: #d32f2f; 
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin: 0.25rem 0 0;
+}
