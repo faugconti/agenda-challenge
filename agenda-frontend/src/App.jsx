@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <h1 className='title'>Agendita :)</h1>
+      <h1 className='title'>Agenda</h1>
       {isModalOpen && <ContactModal onClose={closeModalHandler} />}
       {isDeleteModalOpen && <ConfirmationModal onClose={closeDeleteModalHandler} />}
       <p>{loading && 'Fetching from server...'}</p>

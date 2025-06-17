@@ -32,13 +32,23 @@ const contactos = [
     {
         nombre: 'Pedro',
         apellido: 'Sanchez',
-        telefono: '3814443333',
+        telefono: '3814565433',
         provincia_id: 24
     }, {
         nombre: 'Marcos',
         apellido: 'Ledesma',
-        telefono: '1112223313',
+        telefono: '114542323',
         provincia_id: 1
+    }, {
+        nombre: 'John',
+        apellido: 'Flores',
+        telefono: '3432211532',
+        provincia_id: 5
+    }, {
+        nombre: 'Manuel',
+        apellido: 'Gonzales',
+        telefono: '3654331232',
+        provincia_id: 20
     }
 ]
 
