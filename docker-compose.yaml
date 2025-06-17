@@ -1,0 +1,31 @@
+services:
+  frontend:
+    build: ./agenda-frontend
+    ports:
+      - ${FRONTEND_PORT}:${FRONTEND_PORT} #.env (global)
+    volumes:
+      - ./agenda-frontend:/app
+      - /app/node_modules                 #for vite rewrites
+    environment:
+      - PORT=${FRONTEND_PORT}
+    env_file:
+      - .env
+      - ./agenda-frontend/.env
+    networks:
+      - agenda-net
+
+  backend:
+    build: ./agenda-backend
+    ports:
+      - ${BACKEND_PORT}:${BACKEND_PORT} # .env(global)
+    environment:
+      - PORT=${BACKEND_PORT}
+    env_file:
+      - .env
+      - ./agenda-backend/.env
+    networks:
+      - agenda-net
+
+networks:
+  agenda-net:
+    driver: bridge
